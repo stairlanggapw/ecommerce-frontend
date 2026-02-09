@@ -22,12 +22,54 @@ window.addEventListener('scroll', () => {
     clearTimeout(scrollTimeout);
     
     if (scrollTop > lastScrollTop && scrollTop > 100) {
-        // Scroll DOWN - navbar hilang
         navbar.classList.add('hide');
     } else {
-        // Scroll UP - navbar muncul
         navbar.classList.remove('hide');
     }
     
     lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
 });
+
+const prevBtn = document.querySelector('.previous .btn1:first-child');
+const nextBtn = document.querySelector('.previous .btn1:last-child');
+const pageLinks = document.querySelectorAll('.previous .link');
+let currentPage = 1;
+const totalPages = pageLinks.length;
+
+updateActivePage();
+
+pageLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        currentPage = parseInt(this.value);
+        updateActivePage();
+    });
+});
+
+prevBtn.addEventListener('click', function() {
+    if (currentPage > 1) {
+        currentPage--;
+        updateActivePage();
+    }
+});
+
+nextBtn.addEventListener('click', function() {
+    if (currentPage < totalPages) {
+        currentPage++;
+        updateActivePage();
+    }
+});
+
+function updateActivePage() {
+    // Update class active pada nomor halaman
+    pageLinks.forEach(link => {
+        link.classList.remove('active');
+        if (parseInt(link.value) === currentPage) {
+            link.classList.add('active');
+        }
+    });
+    
+    prevBtn.disabled = currentPage === 1;
+    nextBtn.disabled = currentPage === totalPages;
+    
+    console.log('Current Page:', currentPage);
+}

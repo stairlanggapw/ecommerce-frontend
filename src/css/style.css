@@ -154,7 +154,7 @@ body {
         top: 80px;
         left: 0;
         width: 100%;
-        background-color: #caa811;
+        background-color: #efefef;
         flex-direction: column;
         padding: 20px 0;
         display: none;
@@ -908,22 +908,21 @@ body {
 .footer {
     background-color: #25343F;
     color: white;
-    padding: 60px 60px 30px;
+    padding: 60px 40px;
 }
 
 .footer-content {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     gap: 40px;
-    margin-bottom: 40px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding-bottom: 40px;
+    margin-bottom: 50px;
 }
 
+/* Logo Footer */
 .logo-footer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .logo-footer p {
@@ -934,67 +933,203 @@ body {
     font-weight: 600;
 }
 
-.text-footer  p{
-    font-family: 'inter', sans-serif;
+.text-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.text-footer p {
+    font-family: 'Inter', sans-serif;
     font-size: 13px;
     color: rgba(255, 255, 255, 0.7);
-    margin-top: 10px;
+    margin: 0;
+    line-height: 1.6;
     font-weight: 400;
 }
 
-.footer-nav,
-.footer-categories,
-.subcribe {
+/* Footer Navigation */
+.footer-nav {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 20px;
 }
 
-.footer-nav h4,
-.footer-categories h4,
-.subcribe h4 {
+.footer-nav h4 {
     font-size: 16px;
-    font-weight: 600;
+    font-weight: 700;
     margin: 0;
     color: white;
 }
 
-.footer-nav a,
+.footer-nav a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    display: block;
+    line-height: 1.8;
+}
+
+.footer-nav a:hover {
+    color: white;
+}
+
+/* Footer Categories */
+.footer-categories {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-categories h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
+}
+
 .footer-categories a {
     color: rgba(255, 255, 255, 0.7);
     text-decoration: none;
     font-size: 14px;
     transition: all 0.3s ease;
+    display: block;
+    line-height: 1.8;
 }
 
-.footer-nav a:hover,
 .footer-categories a:hover {
     color: white;
-    transform: translateX(5px);
+}
+
+/* Social & Payment Wrapper (1 kolom, 2 baris) */
+.social-payment-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Social Container */
+.social-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.social-container h5 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.social-icons-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.social-icon:hover {
+    background-color: #007bff;
+    transform: translateY(-2px);
+}
+
+/* Footer Payment */
+.footer-payment {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.footer-payment h5 {
+    font-size: 13px;
+    font-weight: 600;
+    margin: 0;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.payment-icons-wrapper {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.payment-icon {
+    width: 45px;
+    height: 45px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.payment-icon:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px);
+}
+
+/* Subscribe */
+.subcribe {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.subcribe h4 {
+    font-size: 16px;
+    font-weight: 700;
+    margin: 0;
+    color: white;
 }
 
 .subcribe input {
     padding: 12px 16px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: none;
     border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.15);
     color: white;
     font-size: 14px;
     transition: all 0.3s ease;
+    font-family: 'Inter', sans-serif;
 }
 
 .subcribe input:focus {
     outline: none;
-    border-color: white;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.25);
 }
 
 .subcribe input::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
 }
 
 .subscribe-btn {
-    padding: 10px 20px;
+    padding: 12px 24px;
     background-color: #007bff;
     color: white;
     border: none;
@@ -1011,109 +1146,61 @@ body {
     transform: translateY(-2px);
 }
 
-/* Footer Bottom */
+/* Footer Copyright */
 .footer-copyright {
     text-align: center;
-    font-size: 15px;
-    color: rgba(255, 255, 255, 0.5);
-    padding-top: 20px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    padding-top: 30px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-/* Responsive - Tablet (768px ke bawah) */
+/* Responsive - Tablet */
 @media (max-width: 768px) {
-    .message-section {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        padding: 60px 30px;
+    .footer {
+        padding: 40px 30px;
     }
 
-    .message-box h2,
-    .riview-website h2 {
+    .footer-content {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+    }
+
+    .logo-footer {
+        grid-column: 1 / -1;
+    }
+
+    .logo-footer p {
         font-size: 28px;
     }
 
-    .message-box p {
-        font-size: 14px;
+    .footer-nav h4,
+    .footer-categories h4,
+    .subcribe h4 {
+        font-size: 15px;
     }
 
-    .message-input-box {
-        flex-direction: column;
-    }
-
-    .message-input {
-        width: 100%;
-    }
-
-    .message-btn {
-        width: 100%;
-    }
-
-    .footer-content {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-    }
-
-    .footer {
-        padding: 40px 30px 20px;
+    .social-icon,
+    .payment-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
     }
 }
 
-/* Mobile (480px ke bawah) */
+/* Mobile */
 @media (max-width: 480px) {
-    .message-section {
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 40px 15px;
-    }
-
-    .message-box h2,
-    .riview-website h2 {
-        font-size: 22px;
-    }
-
-    .message-box p {
-        font-size: 13px;
-    }
-
-    .message-input-box {
-        flex-direction: column;
-    }
-
-    .message-input {
-        width: 100%;
-        padding: 12px 15px;
-        font-size: 14px;
-    }
-
-    .message-btn {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-
-    .review-cards input,
-    .review-cards textarea {
-        padding: 12px 15px;
-        font-size: 14px;
-    }
-
-    .review-cards button {
-        width: 100%;
-        padding: 12px 20px;
-        font-size: 14px;
+    .footer {
+        padding: 30px 15px;
     }
 
     .footer-content {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 25px;
     }
 
     .logo-footer p {
         font-size: 24px;
-    }
-
-    .footer {
-        padding: 30px 15px 15px;
     }
 
     .footer-nav h4,
@@ -1122,16 +1209,25 @@ body {
         font-size: 14px;
     }
 
-    .footer-nav a,
-    .footer-categories a {
-        font-size: 12px;
+    .social-icon,
+    .payment-icon {
+        width: 38px;
+        height: 38px;
+        font-size: 14px;
+    }
+
+    .social-icons-wrapper,
+    .payment-icons-wrapper {
+        gap: 8px;
+    }
+
+    .subcribe input {
+        font-size: 13px;
+        padding: 10px 12px;
     }
 
     .subscribe-btn {
-        width: 100%;
-    }
-
-    .footer-copyright {
-        font-size: 11px;
+        font-size: 12px;
+        padding: 10px 20px;
     }
 }
