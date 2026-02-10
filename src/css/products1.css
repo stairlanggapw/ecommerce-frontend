@@ -200,6 +200,7 @@ body {
     }
 }
 
+/* background */
 .background-electronic {
     background-image: url('../assets/bg/shopping.jpg');
     background-size: cover;
@@ -845,3 +846,5 @@ body {
         padding: 10px 20px;
     }
 }
+
+

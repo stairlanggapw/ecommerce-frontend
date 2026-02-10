@@ -60,7 +60,6 @@ nextBtn.addEventListener('click', function() {
 });
 
 function updateActivePage() {
-    // Update class active pada nomor halaman
     pageLinks.forEach(link => {
         link.classList.remove('active');
         if (parseInt(link.value) === currentPage) {
@@ -73,3 +72,5 @@ function updateActivePage() {
     
     console.log('Current Page:', currentPage);
 }
+
+
