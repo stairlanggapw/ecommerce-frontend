@@ -674,6 +674,157 @@ body {
     }
 }
 
+/* Previous */
+.previous {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 50px auto 20px auto;
+    padding: 0 15px;
+    flex-wrap: wrap;
+}
+
+.previous ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.btn1 {
+    padding: 10px;
+    background-color: #25343F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+}
+
+.btn1 i {
+    font-size: 16px;
+}
+
+.btn1:hover {
+    background-color: #25343F;
+}
+
+.btn1:disabled {
+    background-color: #333;
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.link {
+    padding: 8px 12px;
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    user-select: none;
+    min-width: 40px;
+    text-align: center;
+}
+
+.link:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.link.active {
+    background-color: #25343F;
+    color: white;
+    border-color: #25343F;
+}
+
+/* Tablet - 768px ke bawah */
+@media screen and (max-width: 768px) {
+    .previous {
+        gap: 8px;
+        margin: 30px auto 15px auto;
+    }
+    
+    .previous ul {
+        gap: 4px;
+    }
+    
+    .btn1 {
+        width: 36px;
+        height: 36px;
+        padding: 8px;
+    }
+    
+    .btn1 i {
+        font-size: 14px;
+    }
+    
+    .link {
+        padding: 7px 10px;
+        font-size: 13px;
+        min-width: 36px;
+    }
+}
+
+/* Mobile - 480px ke bawah */
+@media screen and (max-width: 480px) {
+    .previous {
+        gap: 6px;
+        margin: 20px auto 10px auto;
+    }
+    
+    .previous ul {
+        gap: 3px;
+    }
+    
+    .btn1 {
+        width: 32px;
+        height: 32px;
+        padding: 6px;
+    }
+    
+    .btn1 i {
+        font-size: 12px;
+    }
+    
+    .link {
+        padding: 6px 8px;
+        font-size: 12px;
+        min-width: 32px;
+    }
+}
+
+/* Mobile kecil - 360px ke bawah */
+@media screen and (max-width: 360px) {
+    .previous {
+        gap: 5px;
+    }
+    
+    .btn1 {
+        width: 28px;
+        height: 28px;
+    }
+    
+    .btn1 i {
+        font-size: 11px;
+    }
+    
+    .link {
+        padding: 5px 7px;
+        font-size: 11px;
+        min-width: 28px;
+    }
+}
+
 /* text decoration */
 .text-section {
     position: relative;
